@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style type="text/tailwindcss">
+    <style>
         @theme {
             --color-teal-primary: #0891B2;
             --color-teal-light: #06B6D4;
@@ -21,8 +21,6 @@
             --font-heading: 'DM Sans', sans-serif;
             --font-body: 'IBM Plex Sans', sans-serif;
         }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         /* Geometric grid background */
         .grid-bg {
@@ -254,7 +252,7 @@
         }
     </style>
 </head>
-<body class="font-[--font-body] text-navy bg-white grid-bg antialiased">
+<body class="font-[var(--font-body)] text-navy bg-white grid-bg antialiased">
 
     <!-- NAV -->
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 nav-solid transition-all duration-300">
@@ -263,10 +261,10 @@
                 <!-- Logo -->
                 <a href="#" class="flex items-center gap-3 group">
                     <div class="w-9 h-9 bg-teal-primary rounded flex items-center justify-center relative">
-                        <span class="text-white font-[--font-heading] font-bold text-sm">P</span>
+                        <span class="text-white font-[var(--font-heading)] font-bold text-sm">P</span>
                         <div class="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 border border-teal-primary rounded-full bg-white"></div>
                     </div>
-                    <span class="font-[--font-heading] text-lg font-bold tracking-[0.2em] text-navy">PHYSIO DAMM</span>
+                    <span class="font-[var(--font-heading)] text-lg font-bold tracking-[0.2em] text-navy">PHYSIO DAMM</span>
                 </a>
                 <!-- Desktop Nav -->
                 <div class="hidden md:flex items-center gap-8">
@@ -320,9 +318,9 @@
                 <div class="slide-left">
                     <div class="flex items-center gap-3 mb-6">
                         <div class="accent-line"></div>
-                        <span class="text-teal-primary text-sm font-semibold tracking-wider uppercase font-[--font-heading]">Physiotherapie in Köln</span>
+                        <span class="text-teal-primary text-sm font-semibold tracking-wider uppercase font-[var(--font-heading)]">Physiotherapie in Köln</span>
                     </div>
-                    <h1 class="font-[--font-heading] text-4xl sm:text-5xl lg:text-6xl font-bold text-navy leading-[1.1] mb-6">
+                    <h1 class="font-[var(--font-heading)] text-4xl sm:text-5xl lg:text-6xl font-bold text-navy leading-[1.1] mb-6">
                         Professionelle<br>
                         <span class="text-teal-primary">Physiotherapie</span><br>
                         in Köln-Junkersdorf
@@ -391,14 +389,14 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 slide-up">
                 <div class="text-center">
-                    <div class="font-[--font-heading] text-3xl lg:text-4xl font-bold text-teal-primary counter" data-target="25">0</div>
+                    <div class="font-[var(--font-heading)] text-3xl lg:text-4xl font-bold text-teal-primary counter" data-target="25">0</div>
                     <div class="text-sm text-gray-warm mt-1">Jahre Erfahrung</div>
                     <div class="w-12 h-0.5 bg-teal-primary/20 mx-auto mt-3 counter-bar rounded-full overflow-hidden">
                         <div class="h-full bg-teal-primary rounded-full"></div>
                     </div>
                 </div>
                 <div class="text-center">
-                    <div class="font-[--font-heading] text-3xl lg:text-4xl font-bold text-teal-primary counter" data-target="13">0</div>
+                    <div class="font-[var(--font-heading)] text-3xl lg:text-4xl font-bold text-teal-primary counter" data-target="13">0</div>
                     <div class="text-sm text-gray-warm mt-1">Therapiebereiche</div>
                     <div class="w-12 h-0.5 bg-teal-primary/20 mx-auto mt-3 counter-bar rounded-full overflow-hidden">
                         <div class="h-full bg-teal-primary rounded-full"></div>
@@ -406,8 +404,8 @@
                 </div>
                 <div class="text-center">
                     <div class="flex items-center justify-center gap-1">
-                        <div class="font-[--font-heading] text-3xl lg:text-4xl font-bold text-teal-primary">100</div>
-                        <span class="font-[--font-heading] text-xl font-bold text-teal-primary">%</span>
+                        <div class="font-[var(--font-heading)] text-3xl lg:text-4xl font-bold text-teal-primary">100</div>
+                        <span class="font-[var(--font-heading)] text-xl font-bold text-teal-primary">%</span>
                     </div>
                     <div class="text-sm text-gray-warm mt-1">Kassenleistung</div>
                     <div class="w-12 h-0.5 bg-teal-primary/20 mx-auto mt-3 counter-bar rounded-full overflow-hidden">
@@ -415,7 +413,7 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <div class="font-[--font-heading] text-3xl lg:text-4xl font-bold text-teal-primary">1:1</div>
+                    <div class="font-[var(--font-heading)] text-3xl lg:text-4xl font-bold text-teal-primary">1:1</div>
                     <div class="text-sm text-gray-warm mt-1">Einzelbehandlung</div>
                     <div class="w-12 h-0.5 bg-teal-primary/20 mx-auto mt-3 counter-bar rounded-full overflow-hidden">
                         <div class="h-full bg-teal-primary rounded-full"></div>
@@ -436,9 +434,9 @@
             <div class="max-w-2xl mb-16 slide-up">
                 <div class="flex items-center gap-3 mb-4">
                     <div class="accent-line"></div>
-                    <span class="text-teal-primary text-sm font-semibold tracking-wider uppercase font-[--font-heading]">Leistungen</span>
+                    <span class="text-teal-primary text-sm font-semibold tracking-wider uppercase font-[var(--font-heading)]">Leistungen</span>
                 </div>
-                <h2 class="font-[--font-heading] text-3xl sm:text-4xl font-bold text-navy mb-4">
+                <h2 class="font-[var(--font-heading)] text-3xl sm:text-4xl font-bold text-navy mb-4">
                     Unser Behandlungsspektrum
                 </h2>
                 <p class="text-gray-warm text-lg leading-relaxed">
@@ -448,7 +446,7 @@
 
             <!-- Classic services -->
             <div class="mb-12 slide-up">
-                <h3 class="font-[--font-heading] text-sm font-semibold tracking-wider uppercase text-gray-warm mb-6 flex items-center gap-3">
+                <h3 class="font-[var(--font-heading)] text-sm font-semibold tracking-wider uppercase text-gray-warm mb-6 flex items-center gap-3">
                     <span class="w-2 h-2 bg-teal-primary rounded-full"></span>
                     Klassische Physiotherapie
                 </h3>
@@ -458,7 +456,7 @@
                         <div class="w-10 h-10 bg-teal-pale rounded flex items-center justify-center mb-4 group-hover:bg-teal-primary/10 transition-colors">
                             <svg class="w-5 h-5 text-teal-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
                         </div>
-                        <h4 class="font-[--font-heading] font-semibold text-navy mb-1">Krankengymnastik</h4>
+                        <h4 class="font-[var(--font-heading)] font-semibold text-navy mb-1">Krankengymnastik</h4>
                         <p class="text-sm text-gray-warm">Aktive und passive Bewegungstherapie zur Wiederherstellung der Beweglichkeit</p>
                         <div class="absolute top-0 left-0 w-0 h-0.5 bg-teal-primary group-hover:w-full transition-all duration-500"></div>
                     </div>
@@ -467,7 +465,7 @@
                         <div class="w-10 h-10 bg-teal-pale rounded flex items-center justify-center mb-4 group-hover:bg-teal-primary/10 transition-colors">
                             <svg class="w-5 h-5 text-teal-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"/></svg>
                         </div>
-                        <h4 class="font-[--font-heading] font-semibold text-navy mb-1">Manuelle Therapie</h4>
+                        <h4 class="font-[var(--font-heading)] font-semibold text-navy mb-1">Manuelle Therapie</h4>
                         <p class="text-sm text-gray-warm">Gezielte Handgrifftechniken zur Behandlung von Funktionsstörungen</p>
                         <div class="absolute top-0 left-0 w-0 h-0.5 bg-teal-primary group-hover:w-full transition-all duration-500"></div>
                     </div>
@@ -476,7 +474,7 @@
                         <div class="w-10 h-10 bg-teal-pale rounded flex items-center justify-center mb-4 group-hover:bg-teal-primary/10 transition-colors">
                             <svg class="w-5 h-5 text-teal-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
                         </div>
-                        <h4 class="font-[--font-heading] font-semibold text-navy mb-1">Lymphdrainage</h4>
+                        <h4 class="font-[var(--font-heading)] font-semibold text-navy mb-1">Lymphdrainage</h4>
                         <p class="text-sm text-gray-warm">Sanfte Entstauungstherapie zur Förderung des Lymphabflusses</p>
                         <div class="absolute top-0 left-0 w-0 h-0.5 bg-teal-primary group-hover:w-full transition-all duration-500"></div>
                     </div>
@@ -485,7 +483,7 @@
                         <div class="w-10 h-10 bg-teal-pale rounded flex items-center justify-center mb-4 group-hover:bg-teal-primary/10 transition-colors">
                             <svg class="w-5 h-5 text-teal-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
                         </div>
-                        <h4 class="font-[--font-heading] font-semibold text-navy mb-1">KG auf neurophysiol. Basis</h4>
+                        <h4 class="font-[var(--font-heading)] font-semibold text-navy mb-1">KG auf neurophysiol. Basis</h4>
                         <p class="text-sm text-gray-warm">Krankengymnastik bei neurologischen Erkrankungen</p>
                         <div class="absolute top-0 left-0 w-0 h-0.5 bg-teal-primary group-hover:w-full transition-all duration-500"></div>
                     </div>
@@ -494,7 +492,7 @@
                         <div class="w-10 h-10 bg-teal-pale rounded flex items-center justify-center mb-4 group-hover:bg-teal-primary/10 transition-colors">
                             <svg class="w-5 h-5 text-teal-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
                         </div>
-                        <h4 class="font-[--font-heading] font-semibold text-navy mb-1">Massagen</h4>
+                        <h4 class="font-[var(--font-heading)] font-semibold text-navy mb-1">Massagen</h4>
                         <p class="text-sm text-gray-warm">Therapeutische Massagen zur Lockerung und Entspannung</p>
                         <div class="absolute top-0 left-0 w-0 h-0.5 bg-teal-primary group-hover:w-full transition-all duration-500"></div>
                     </div>
@@ -503,7 +501,7 @@
                         <div class="w-10 h-10 bg-teal-pale rounded flex items-center justify-center mb-4 group-hover:bg-teal-primary/10 transition-colors">
                             <svg class="w-5 h-5 text-teal-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/></svg>
                         </div>
-                        <h4 class="font-[--font-heading] font-semibold text-navy mb-1">Wärme-/Kälteanwendungen</h4>
+                        <h4 class="font-[var(--font-heading)] font-semibold text-navy mb-1">Wärme-/Kälteanwendungen</h4>
                         <p class="text-sm text-gray-warm">Thermotherapie zur Schmerzlinderung und Durchblutungsförderung</p>
                         <div class="absolute top-0 left-0 w-0 h-0.5 bg-teal-primary group-hover:w-full transition-all duration-500"></div>
                     </div>
@@ -512,7 +510,7 @@
                         <div class="w-10 h-10 bg-teal-pale rounded flex items-center justify-center mb-4 group-hover:bg-teal-primary/10 transition-colors">
                             <svg class="w-5 h-5 text-teal-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                         </div>
-                        <h4 class="font-[--font-heading] font-semibold text-navy mb-1">Elektrotherapie</h4>
+                        <h4 class="font-[var(--font-heading)] font-semibold text-navy mb-1">Elektrotherapie</h4>
                         <p class="text-sm text-gray-warm">Schmerztherapie und Muskelstimulation durch elektrische Impulse</p>
                         <div class="absolute top-0 left-0 w-0 h-0.5 bg-teal-primary group-hover:w-full transition-all duration-500"></div>
                     </div>
@@ -522,7 +520,7 @@
 
             <!-- Specialized services -->
             <div class="slide-up">
-                <h3 class="font-[--font-heading] text-sm font-semibold tracking-wider uppercase text-gray-warm mb-6 flex items-center gap-3">
+                <h3 class="font-[var(--font-heading)] text-sm font-semibold tracking-wider uppercase text-gray-warm mb-6 flex items-center gap-3">
                     <span class="w-2 h-2 bg-teal-light rounded-full"></span>
                     Spezialbehandlungen
                 </h3>
@@ -532,7 +530,7 @@
                         <div class="w-10 h-10 bg-white rounded flex items-center justify-center mb-4 shadow-sm group-hover:shadow transition-shadow">
                             <svg class="w-5 h-5 text-teal-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
                         </div>
-                        <h4 class="font-[--font-heading] font-semibold text-navy mb-1">Galileo-Vibrationstraining</h4>
+                        <h4 class="font-[var(--font-heading)] font-semibold text-navy mb-1">Galileo-Vibrationstraining</h4>
                         <p class="text-sm text-gray-warm">Effektives Training durch seitenalternierende Vibration</p>
                         <div class="absolute top-0 left-0 w-0 h-0.5 bg-teal-light group-hover:w-full transition-all duration-500"></div>
                     </div>
@@ -541,7 +539,7 @@
                         <div class="w-10 h-10 bg-white rounded flex items-center justify-center mb-4 shadow-sm group-hover:shadow transition-shadow">
                             <svg class="w-5 h-5 text-teal-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                         </div>
-                        <h4 class="font-[--font-heading] font-semibold text-navy mb-1">CMD-Behandlung</h4>
+                        <h4 class="font-[var(--font-heading)] font-semibold text-navy mb-1">CMD-Behandlung</h4>
                         <p class="text-sm text-gray-warm">Therapie bei Kiefergelenksbeschwerden und Fehlfunktionen</p>
                         <div class="absolute top-0 left-0 w-0 h-0.5 bg-teal-light group-hover:w-full transition-all duration-500"></div>
                     </div>
@@ -550,7 +548,7 @@
                         <div class="w-10 h-10 bg-white rounded flex items-center justify-center mb-4 shadow-sm group-hover:shadow transition-shadow">
                             <svg class="w-5 h-5 text-teal-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                         </div>
-                        <h4 class="font-[--font-heading] font-semibold text-navy mb-1">Triggerpunktbehandlung</h4>
+                        <h4 class="font-[var(--font-heading)] font-semibold text-navy mb-1">Triggerpunktbehandlung</h4>
                         <p class="text-sm text-gray-warm">Gezielte Therapie myofaszialer Schmerzpunkte</p>
                         <div class="absolute top-0 left-0 w-0 h-0.5 bg-teal-light group-hover:w-full transition-all duration-500"></div>
                     </div>
@@ -559,7 +557,7 @@
                         <div class="w-10 h-10 bg-white rounded flex items-center justify-center mb-4 shadow-sm group-hover:shadow transition-shadow">
                             <svg class="w-5 h-5 text-teal-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                         </div>
-                        <h4 class="font-[--font-heading] font-semibold text-navy mb-1">Beckenbodentraining</h4>
+                        <h4 class="font-[var(--font-heading)] font-semibold text-navy mb-1">Beckenbodentraining</h4>
                         <p class="text-sm text-gray-warm">Spezialisierte Kräftigung der Beckenbodenmuskulatur</p>
                         <div class="absolute top-0 left-0 w-0 h-0.5 bg-teal-light group-hover:w-full transition-all duration-500"></div>
                     </div>
@@ -568,7 +566,7 @@
                         <div class="w-10 h-10 bg-white rounded flex items-center justify-center mb-4 shadow-sm group-hover:shadow transition-shadow">
                             <svg class="w-5 h-5 text-teal-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
                         </div>
-                        <h4 class="font-[--font-heading] font-semibold text-navy mb-1">Kinesio-Taping</h4>
+                        <h4 class="font-[var(--font-heading)] font-semibold text-navy mb-1">Kinesio-Taping</h4>
                         <p class="text-sm text-gray-warm">Funktionelle Klebetechnik zur Stabilisierung und Schmerzlinderung</p>
                         <div class="absolute top-0 left-0 w-0 h-0.5 bg-teal-light group-hover:w-full transition-all duration-500"></div>
                     </div>
@@ -577,7 +575,7 @@
                         <div class="w-10 h-10 bg-white rounded flex items-center justify-center mb-4 shadow-sm group-hover:shadow transition-shadow">
                             <svg class="w-5 h-5 text-teal-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
                         </div>
-                        <h4 class="font-[--font-heading] font-semibold text-navy mb-1">Personal-Training</h4>
+                        <h4 class="font-[var(--font-heading)] font-semibold text-navy mb-1">Personal-Training</h4>
                         <p class="text-sm text-gray-warm">Individuelles Training zur nachhaltigen Gesundheitsförderung</p>
                         <div class="absolute top-0 left-0 w-0 h-0.5 bg-teal-light group-hover:w-full transition-all duration-500"></div>
                     </div>
@@ -615,14 +613,14 @@
                             <!-- Bottom info strip -->
                             <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy/5 to-transparent p-6">
                                 <div class="text-center">
-                                    <span class="font-[--font-heading] text-sm font-semibold text-navy/60 tracking-wider uppercase">Elmar Damm</span>
+                                    <span class="font-[var(--font-heading)] text-sm font-semibold text-navy/60 tracking-wider uppercase">Elmar Damm</span>
                                     <div class="text-xs text-gray-warm mt-1">Staatlich geprüfter Physiotherapeut</div>
                                 </div>
                             </div>
                         </div>
                         <!-- Floating accent card -->
                         <div class="absolute -bottom-4 -right-4 bg-teal-primary text-white p-5 rounded shadow-lg shadow-teal-primary/30 hidden sm:block">
-                            <div class="font-[--font-heading] text-2xl font-bold">25+</div>
+                            <div class="font-[var(--font-heading)] text-2xl font-bold">25+</div>
                             <div class="text-xs text-white/80">Jahre Erfahrung</div>
                         </div>
                     </div>
@@ -632,9 +630,9 @@
                 <div class="slide-right">
                     <div class="flex items-center gap-3 mb-4">
                         <div class="accent-line"></div>
-                        <span class="text-teal-primary text-sm font-semibold tracking-wider uppercase font-[--font-heading]">Über uns</span>
+                        <span class="text-teal-primary text-sm font-semibold tracking-wider uppercase font-[var(--font-heading)]">Über uns</span>
                     </div>
-                    <h2 class="font-[--font-heading] text-3xl sm:text-4xl font-bold text-navy mb-6">
+                    <h2 class="font-[var(--font-heading)] text-3xl sm:text-4xl font-bold text-navy mb-6">
                         Kompetenz und Erfahrung<br>für Ihre Gesundheit
                     </h2>
                     <div class="space-y-4 text-gray-warm leading-relaxed">
@@ -680,9 +678,9 @@
             <div class="max-w-2xl mb-16 slide-up">
                 <div class="flex items-center gap-3 mb-4">
                     <div class="accent-line"></div>
-                    <span class="text-teal-primary text-sm font-semibold tracking-wider uppercase font-[--font-heading]">Kontakt</span>
+                    <span class="text-teal-primary text-sm font-semibold tracking-wider uppercase font-[var(--font-heading)]">Kontakt</span>
                 </div>
-                <h2 class="font-[--font-heading] text-3xl sm:text-4xl font-bold text-navy mb-4">
+                <h2 class="font-[var(--font-heading)] text-3xl sm:text-4xl font-bold text-navy mb-4">
                     So erreichen Sie uns
                 </h2>
                 <p class="text-gray-warm text-lg">
@@ -699,7 +697,7 @@
                             <svg class="w-5 h-5 text-teal-primary group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                         </div>
                         <div>
-                            <div class="font-[--font-heading] font-semibold text-navy text-sm mb-0.5">Telefon</div>
+                            <div class="font-[var(--font-heading)] font-semibold text-navy text-sm mb-0.5">Telefon</div>
                             <div class="text-teal-primary font-semibold">0221-58988779</div>
                             <div class="text-xs text-gray-warm mt-1">Termine nach Vereinbarung</div>
                         </div>
@@ -711,7 +709,7 @@
                             <svg class="w-5 h-5 text-teal-primary group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                         </div>
                         <div>
-                            <div class="font-[--font-heading] font-semibold text-navy text-sm mb-0.5">E-Mail</div>
+                            <div class="font-[var(--font-heading)] font-semibold text-navy text-sm mb-0.5">E-Mail</div>
                             <div class="text-teal-primary font-semibold">mail@physio-damm.de</div>
                         </div>
                     </a>
@@ -722,7 +720,7 @@
                             <svg class="w-5 h-5 text-teal-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                         </div>
                         <div>
-                            <div class="font-[--font-heading] font-semibold text-navy text-sm mb-0.5">Adresse</div>
+                            <div class="font-[var(--font-heading)] font-semibold text-navy text-sm mb-0.5">Adresse</div>
                             <div class="text-navy font-medium">Jungbluthgasse 5</div>
                             <div class="text-sm text-gray-warm">1. Stock (Aufzug vorhanden)</div>
                             <div class="text-sm text-gray-warm">50858 Köln-Junkersdorf</div>
@@ -735,7 +733,7 @@
                             <svg class="w-5 h-5 text-teal-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h8m-8 4h8m-6 4h4M6 3h12a2 2 0 012 2v14l-4-2H6a2 2 0 01-2-2V5a2 2 0 012-2z"/></svg>
                         </div>
                         <div>
-                            <div class="font-[--font-heading] font-semibold text-navy text-sm mb-0.5">Anfahrt mit dem Bus</div>
+                            <div class="font-[var(--font-heading)] font-semibold text-navy text-sm mb-0.5">Anfahrt mit dem Bus</div>
                             <div class="text-sm text-gray-warm">Linie 143, Haltestelle &bdquo;Beethovenstraße&ldquo;</div>
                         </div>
                     </div>
@@ -766,7 +764,7 @@
             <div class="absolute bottom-0 left-0 w-48 h-48 border border-teal-light/20 rounded-full translate-y-1/3 -translate-x-1/4"></div>
         </div>
         <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
-            <h2 class="font-[--font-heading] text-2xl sm:text-3xl font-bold text-white mb-4">
+            <h2 class="font-[var(--font-heading)] text-2xl sm:text-3xl font-bold text-white mb-4">
                 Bereit für Ihre Behandlung?
             </h2>
             <p class="text-white/60 mb-8 max-w-lg mx-auto">
@@ -794,9 +792,9 @@
                 <div>
                     <div class="flex items-center gap-3 mb-4">
                         <div class="w-8 h-8 bg-teal-primary rounded flex items-center justify-center">
-                            <span class="text-white font-[--font-heading] font-bold text-sm">P</span>
+                            <span class="text-white font-[var(--font-heading)] font-bold text-sm">P</span>
                         </div>
-                        <span class="font-[--font-heading] text-base font-bold tracking-[0.15em] text-navy">PHYSIO DAMM</span>
+                        <span class="font-[var(--font-heading)] text-base font-bold tracking-[0.15em] text-navy">PHYSIO DAMM</span>
                     </div>
                     <p class="text-sm text-gray-warm leading-relaxed">
                         Professionelle Physiotherapie in Köln-Junkersdorf. Ihr Partner für Gesundheit und Wohlbefinden.
@@ -804,7 +802,7 @@
                 </div>
                 <!-- Links -->
                 <div>
-                    <h4 class="font-[--font-heading] font-semibold text-navy text-sm mb-4">Navigation</h4>
+                    <h4 class="font-[var(--font-heading)] font-semibold text-navy text-sm mb-4">Navigation</h4>
                     <ul class="space-y-2">
                         <li><a href="#start" class="text-sm text-gray-warm hover:text-teal-primary transition-colors">Startseite</a></li>
                         <li><a href="#leistungen" class="text-sm text-gray-warm hover:text-teal-primary transition-colors">Leistungen</a></li>
@@ -814,7 +812,7 @@
                 </div>
                 <!-- Contact -->
                 <div>
-                    <h4 class="font-[--font-heading] font-semibold text-navy text-sm mb-4">Kontakt</h4>
+                    <h4 class="font-[var(--font-heading)] font-semibold text-navy text-sm mb-4">Kontakt</h4>
                     <ul class="space-y-2 text-sm text-gray-warm">
                         <li>Jungbluthgasse 5</li>
                         <li>50858 Köln-Junkersdorf</li>
@@ -824,7 +822,7 @@
                 </div>
                 <!-- Hours -->
                 <div>
-                    <h4 class="font-[--font-heading] font-semibold text-navy text-sm mb-4">Öffnungszeiten</h4>
+                    <h4 class="font-[var(--font-heading)] font-semibold text-navy text-sm mb-4">Öffnungszeiten</h4>
                     <ul class="space-y-2 text-sm text-gray-warm">
                         <li>Termine nach Vereinbarung</li>
                         <li class="pt-1">Rufen Sie uns an oder</li>
@@ -835,7 +833,7 @@
 
             <!-- Impressum -->
             <div class="py-10 border-t border-surface-alt">
-                <h3 class="font-[--font-heading] font-bold text-navy text-lg mb-6">Impressum</h3>
+                <h3 class="font-[var(--font-heading)] font-bold text-navy text-lg mb-6">Impressum</h3>
                 <div class="grid md:grid-cols-2 gap-8 text-sm text-gray-warm leading-relaxed">
                     <div>
                         <p class="font-semibold text-navy mb-2">Angaben gemäß § 5 TMG</p>
@@ -860,7 +858,7 @@
 
             <!-- Datenschutz -->
             <div class="py-10 border-t border-surface-alt">
-                <h3 class="font-[--font-heading] font-bold text-navy text-lg mb-6">Datenschutzerklärung</h3>
+                <h3 class="font-[var(--font-heading)] font-bold text-navy text-lg mb-6">Datenschutzerklärung</h3>
                 <div class="text-sm text-gray-warm leading-relaxed max-w-4xl space-y-4">
                     <p><strong class="text-navy">Datenschutz auf einen Blick:</strong> Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie unsere Website besuchen.</p>
                     <p><strong class="text-navy">Datenerfassung auf unserer Website:</strong> Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.</p>

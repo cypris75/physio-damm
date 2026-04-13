@@ -159,7 +159,7 @@ a.brutal-link:hover {
 <body class="bg-[var(--color-offwhite)] text-[var(--color-jet)] font-[var(--font-body)] overflow-x-hidden">
 
 <!-- ========== NAV ========== -->
-<nav class="fixed top-0 left-0 right-0 z-50 mix-blend-difference">
+<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 mix-blend-difference transition-all duration-300">
   <div class="flex items-center justify-between px-4 md:px-8 py-4">
     <a href="#" class="font-[var(--font-mono)] text-white text-sm md:text-base tracking-[0.3em] uppercase font-bold">PHYSIO DAMM</a>
     <div class="font-[var(--font-mono)] text-white text-xs md:text-sm tracking-[0.15em] uppercase hidden md:block">
@@ -402,8 +402,46 @@ a.brutal-link:hover {
   </div>
 </section>
 
+<!-- ========== IMPRESSUM & DATENSCHUTZ ========== -->
+<section id="impressum" class="bg-[var(--color-jet)] text-[var(--color-offwhite)] border-t-[6px] border-[var(--color-accent)]">
+  <div class="px-4 md:px-8 lg:px-16 py-16 md:py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+
+      <!-- Impressum -->
+      <div class="lg:col-span-5">
+        <span class="font-[var(--font-mono)] text-[8vw] md:text-[4rem] font-bold tracking-[-0.03em] uppercase leading-none snap-in">IMPRESSUM</span>
+        <div class="mt-8 space-y-4 font-[var(--font-body)] text-sm md:text-base leading-relaxed text-[var(--color-concrete)] snap-in" style="animation-delay: 0.1s">
+          <p class="text-[var(--color-offwhite)] font-semibold">Praxis fuer Physiotherapie</p>
+          <p>Elmar Damm</p>
+          <p>Jungbluthgasse 5<br>50858 Koeln-Junkersdorf</p>
+          <p>Telefon: 0221-58988779<br>E-Mail: mail@physio-damm.de</p>
+          <div class="pt-4 border-t border-[var(--color-concrete)]/20">
+            <p><span class="text-[var(--color-offwhite)] font-medium">Berufsbezeichnung:</span> Physiotherapeut</p>
+            <p><span class="text-[var(--color-offwhite)] font-medium">Zustaendige Aufsichtsbehoerde:</span> Gesundheitsamt der Stadt Koeln</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Datenschutz -->
+      <div class="lg:col-span-7">
+        <span class="font-[var(--font-mono)] text-[8vw] md:text-[4rem] font-bold tracking-[-0.03em] uppercase leading-none snap-in">DATENSCHUTZ</span>
+        <div class="mt-8 space-y-4 font-[var(--font-body)] text-sm md:text-base leading-relaxed text-[var(--color-concrete)] snap-in" style="animation-delay: 0.1s">
+          <p>Der Schutz Ihrer persoenlichen Daten ist uns ein wichtiges Anliegen. Wir verarbeiten Ihre Daten gemaess der geltenden datenschutzrechtlichen Bestimmungen, insbesondere der DSGVO.</p>
+          <div class="space-y-3 pt-4 border-t border-[var(--color-concrete)]/20">
+            <p><span class="text-[var(--color-offwhite)] font-medium">Verantwortlicher:</span> Elmar Damm, Jungbluthgasse 5, 50858 Koeln</p>
+            <p><span class="text-[var(--color-offwhite)] font-medium">Erhebung und Verarbeitung:</span> Bei der Kontaktaufnahme werden Ihre Angaben zur Bearbeitung der Anfrage und fuer den Fall von Anschlussfragen gespeichert.</p>
+            <p><span class="text-[var(--color-offwhite)] font-medium">Ihre Rechte:</span> Auskunft, Berichtigung, Loeschung, Einschraenkung der Verarbeitung, Datenuebertragbarkeit und Widerspruch. Kontaktieren Sie uns hierzu per E-Mail.</p>
+            <p><span class="text-[var(--color-offwhite)] font-medium">Cookies:</span> Diese Website verwendet keine Tracking-Cookies.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ========== FOOTER ========== -->
-<footer class="bg-[var(--color-jet)] text-[var(--color-offwhite)] border-t-[6px] border-[var(--color-accent)]">
+<footer class="bg-[var(--color-jet)] text-[var(--color-offwhite)] border-t border-[var(--color-concrete)]/20">
   <div class="px-4 md:px-8 py-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
     <div class="font-[var(--font-mono)] text-xs tracking-[0.2em] uppercase">
       <span class="text-[var(--color-accent)] font-bold">PHYSIO DAMM</span>
@@ -411,9 +449,9 @@ a.brutal-link:hover {
       <span class="text-[var(--color-concrete)]">Physiotherapiepraxis Koeln-Junkersdorf</span>
     </div>
     <div class="font-[var(--font-mono)] text-xs tracking-[0.15em] uppercase text-[var(--color-concrete)]">
-      <a href="#" class="brutal-link hover:text-[var(--color-offwhite)]">Impressum</a>
+      <a href="#impressum" class="brutal-link hover:text-[var(--color-offwhite)]">Impressum</a>
       <span class="mx-2 opacity-40">|</span>
-      <a href="#" class="brutal-link hover:text-[var(--color-offwhite)]">Datenschutz</a>
+      <a href="#impressum" class="brutal-link hover:text-[var(--color-offwhite)]">Datenschutz</a>
     </div>
   </div>
 </footer>
@@ -444,6 +482,27 @@ a.brutal-link:hover {
   document.querySelectorAll('.snap-in, .snap-left, .snap-right, .hard-reveal').forEach(el => {
     observer.observe(el);
   });
+
+  // Nav background on scroll — prevent floating logo over content
+  const nav = document.getElementById('main-nav');
+  const heroSection = document.querySelector('section');
+  function updateNav() {
+    const scrollY = window.scrollY;
+    const heroBottom = heroSection ? heroSection.offsetHeight : 300;
+    if (scrollY > heroBottom * 0.5) {
+      nav.classList.remove('mix-blend-difference');
+      nav.style.backgroundColor = 'rgba(17,17,17,0.95)';
+      nav.style.backdropFilter = 'blur(8px)';
+      nav.style.webkitBackdropFilter = 'blur(8px)';
+    } else {
+      nav.classList.add('mix-blend-difference');
+      nav.style.backgroundColor = 'transparent';
+      nav.style.backdropFilter = 'none';
+      nav.style.webkitBackdropFilter = 'none';
+    }
+  }
+  window.addEventListener('scroll', updateNav, { passive: true });
+  updateNav();
 
   // Smooth scroll for nav links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
