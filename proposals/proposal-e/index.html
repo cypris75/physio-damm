@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PHYSIO DAMM — Physiotherapiepraxis Koeln-Junkersdorf</title>
+<meta name="description" content="Physiotherapiepraxis Elmar Damm in Koeln-Junkersdorf. Krankengymnastik, Manuelle Therapie, Lymphdrainage, Personal Training. Alle Kassen & Privat.">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+@theme {
+  --font-mono: 'Space Mono', monospace;
+  --font-body: 'Archivo', sans-serif;
+  --color-offwhite: #F5F5F0;
+  --color-jet: #111111;
+  --color-accent: #FF4500;
+  --color-accent-dark: #E63E00;
+  --color-concrete: #B0B0B0;
+}
+
+/* Scanline overlay */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.015) 2px,
+    rgba(0,0,0,0.015) 4px
+  );
+}
+
+/* Halftone dot pattern */
+.halftone {
+  background-image: radial-gradient(circle, #B0B0B0 0.5px, transparent 0.5px);
+  background-size: 8px 8px;
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 20s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Snap-in animations */
+@keyframes snapIn {
+  0% { opacity: 0; transform: translateY(40px) scale(0.95); }
+  70% { opacity: 1; transform: translateY(-3px) scale(1.01); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes snapLeft {
+  0% { opacity: 0; transform: translateX(-60px); }
+  70% { opacity: 1; transform: translateX(4px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes snapRight {
+  0% { opacity: 0; transform: translateX(60px); }
+  70% { opacity: 1; transform: translateX(-4px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes hardReveal {
+  0% { clip-path: inset(0 100% 0 0); }
+  100% { clip-path: inset(0 0 0 0); }
+}
+
+.snap-in {
+  opacity: 0;
+}
+.snap-in.visible {
+  animation: snapIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.snap-left {
+  opacity: 0;
+}
+.snap-left.visible {
+  animation: snapLeft 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.snap-right {
+  opacity: 0;
+}
+.snap-right.visible {
+  animation: snapRight 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.hard-reveal {
+  clip-path: inset(0 100% 0 0);
+}
+.hard-reveal.visible {
+  animation: hardReveal 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Jolt hover */
+.jolt:hover {
+  background-color: var(--color-accent) !important;
+  color: var(--color-offwhite) !important;
+  transform: scale(1.03);
+  transition: all 0.08s ease;
+}
+.jolt {
+  transition: all 0.08s ease;
+}
+
+/* Service row hover */
+.service-row {
+  transition: all 0.08s ease;
+}
+.service-row:hover {
+  background-color: var(--color-jet);
+  color: var(--color-offwhite);
+  padding-left: 1rem;
+}
+.service-row:hover .service-num {
+  color: var(--color-accent);
+}
+
+/* Rotated label */
+.rotated-label {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
+
+/* Selection */
+::selection {
+  background: var(--color-accent);
+  color: var(--color-offwhite);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--color-jet); }
+::-webkit-scrollbar-thumb { background: var(--color-accent); }
+
+/* Link underline jolt */
+a.brutal-link {
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.06s ease;
+}
+a.brutal-link:hover {
+  border-bottom: 2px solid var(--color-accent);
+  color: var(--color-accent);
+}
+
+</style>
+</head>
+
+<body class="bg-[var(--color-offwhite)] text-[var(--color-jet)] font-[var(--font-body)] overflow-x-hidden">
+
+<!-- ========== NAV ========== -->
+<nav class="fixed top-0 left-0 right-0 z-50 mix-blend-difference">
+  <div class="flex items-center justify-between px-4 md:px-8 py-4">
+    <a href="#" class="font-[var(--font-mono)] text-white text-sm md:text-base tracking-[0.3em] uppercase font-bold">PHYSIO DAMM</a>
+    <div class="font-[var(--font-mono)] text-white text-xs md:text-sm tracking-[0.15em] uppercase hidden md:block">
+      <a href="#leistungen" class="hover:text-[var(--color-accent)] transition-colors duration-75">Leistungen</a>
+      <span class="mx-2 opacity-40">|</span>
+      <a href="#ueber" class="hover:text-[var(--color-accent)] transition-colors duration-75">Praxis</a>
+      <span class="mx-2 opacity-40">|</span>
+      <a href="#kontakt" class="hover:text-[var(--color-accent)] transition-colors duration-75">Kontakt</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="min-h-screen flex flex-col justify-center relative border-b-[6px] border-[var(--color-jet)]">
+
+  <!-- Giant background text -->
+  <div class="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none select-none" aria-hidden="true">
+    <span class="font-[var(--font-mono)] text-[20vw] md:text-[18vw] font-bold tracking-[-0.03em] text-[var(--color-jet)] opacity-[0.03] uppercase leading-none">DAMM</span>
+  </div>
+
+  <div class="relative z-10 px-4 md:px-8 pt-24 md:pt-0">
+    <!-- Rotated side label -->
+    <div class="absolute left-2 md:left-6 top-1/3 hidden lg:block">
+      <span class="rotated-label font-[var(--font-mono)] text-[10px] tracking-[0.4em] uppercase text-[var(--color-concrete)]">Koeln-Junkersdorf / Est. Praxis</span>
+    </div>
+
+    <div class="max-w-none ml-0 md:ml-16 lg:ml-24">
+      <h1 class="font-[var(--font-mono)] text-[14vw] md:text-[10vw] lg:text-[8rem] font-bold leading-[0.85] tracking-[-0.04em] uppercase snap-in">
+        <span class="block">BEWEGEN.</span>
+        <span class="block text-[var(--color-accent)] hard-reveal" style="animation-delay: 0.2s">HEILEN.</span>
+        <span class="block snap-in" style="animation-delay: 0.4s">STARK</span>
+        <span class="block snap-in" style="animation-delay: 0.5s">WERDEN.</span>
+      </h1>
+
+      <div class="mt-8 md:mt-12 flex flex-col md:flex-row md:items-end gap-4 md:gap-12">
+        <p class="font-[var(--font-body)] text-lg md:text-xl font-medium tracking-[0.05em] uppercase border-l-4 border-[var(--color-accent)] pl-4 snap-in" style="animation-delay: 0.6s">
+          Physiotherapiepraxis<br>Koeln-Junkersdorf
+        </p>
+        <p class="font-[var(--font-mono)] text-xs tracking-[0.2em] uppercase text-[var(--color-concrete)] snap-in" style="animation-delay: 0.7s">
+          Alle Kassen & Privat<br>Nach Vereinbarung
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Arrow down -->
+  <div class="absolute bottom-8 right-8 font-[var(--font-mono)] text-4xl text-[var(--color-jet)] animate-bounce">
+    &#8595;
+  </div>
+</section>
+
+<!-- ========== MARQUEE ========== -->
+<div class="bg-[var(--color-jet)] text-[var(--color-offwhite)] py-4 border-b-[6px] border-[var(--color-accent)] overflow-hidden">
+  <div class="flex whitespace-nowrap marquee-track" style="width: max-content;">
+    <span class="font-[var(--font-mono)] text-sm md:text-base tracking-[0.3em] uppercase font-bold">
+      KRANKENGYMNASTIK &mdash; MANUELLE THERAPIE &mdash; LYMPHDRAINAGE &mdash; MASSAGEN &mdash; PERSONAL TRAINING &mdash; ELEKTROTHERAPIE &mdash; CMD-BEHANDLUNG &mdash; GALILEO &mdash;&nbsp;
+    </span>
+    <span class="font-[var(--font-mono)] text-sm md:text-base tracking-[0.3em] uppercase font-bold">
+      KRANKENGYMNASTIK &mdash; MANUELLE THERAPIE &mdash; LYMPHDRAINAGE &mdash; MASSAGEN &mdash; PERSONAL TRAINING &mdash; ELEKTROTHERAPIE &mdash; CMD-BEHANDLUNG &mdash; GALILEO &mdash;&nbsp;
+    </span>
+  </div>
+</div>
+
+<!-- ========== LEISTUNGEN ========== -->
+<section id="leistungen" class="py-16 md:py-24 border-b-[6px] border-[var(--color-jet)] relative">
+
+  <!-- Section label -->
+  <div class="px-4 md:px-8 mb-12">
+    <div class="flex items-baseline gap-4 md:gap-8">
+      <span class="font-[var(--font-mono)] text-[8vw] md:text-[5rem] font-bold tracking-[-0.03em] uppercase leading-none snap-in">LEISTUNGEN</span>
+      <span class="font-[var(--font-mono)] text-xs tracking-[0.3em] uppercase text-[var(--color-concrete)] hidden md:inline snap-in">(13 Behandlungen)</span>
+    </div>
+    <div class="h-1 bg-[var(--color-jet)] mt-4 hard-reveal"></div>
+  </div>
+
+  <!-- Services grid -->
+  <div class="px-0 md:px-8">
+    <div class="service-row flex items-baseline border-t-2 border-[var(--color-jet)] px-4 md:px-4 py-3 md:py-4 cursor-default snap-left">
+      <span class="service-num font-[var(--font-mono)] text-xs md:text-sm tracking-[0.2em] text-[var(--color-accent)] w-12 md:w-16 shrink-0 font-bold">01</span>
+      <span class="font-[var(--font-body)] text-base md:text-xl lg:text-2xl font-semibold tracking-[0.02em] uppercase">Krankengymnastik</span>
+    </div>
+    <div class="service-row flex items-baseline border-t-2 border-[var(--color-jet)] px-4 md:px-4 py-3 md:py-4 cursor-default snap-left" style="animation-delay:0.04s">
+      <span class="service-num font-[var(--font-mono)] text-xs md:text-sm tracking-[0.2em] text-[var(--color-accent)] w-12 md:w-16 shrink-0 font-bold">02</span>
+      <span class="font-[var(--font-body)] text-base md:text-xl lg:text-2xl font-semibold tracking-[0.02em] uppercase">Manuelle Therapie</span>
+    </div>
+    <div class="service-row flex items-baseline border-t-2 border-[var(--color-jet)] px-4 md:px-4 py-3 md:py-4 cursor-default snap-left" style="animation-delay:0.08s">
+      <span class="service-num font-[var(--font-mono)] text-xs md:text-sm tracking-[0.2em] text-[var(--color-accent)] w-12 md:w-16 shrink-0 font-bold">03</span>
+      <span class="font-[var(--font-body)] text-base md:text-xl lg:text-2xl font-semibold tracking-[0.02em] uppercase">Lymphdrainage</span>
+    </div>
+    <div class="service-row flex items-baseline border-t-2 border-[var(--color-jet)] px-4 md:px-4 py-3 md:py-4 cursor-default snap-left" style="animation-delay:0.12s">
+      <span class="service-num font-[var(--font-mono)] text-xs md:text-sm tracking-[0.2em] text-[var(--color-accent)] w-12 md:w-16 shrink-0 font-bold">04</span>
+      <span class="font-[var(--font-body)] text-base md:text-xl lg:text-2xl font-semibold tracking-[0.02em] uppercase">KG auf neurophysiologischer Basis</span>
+    </div>
+    <div class="service-row flex items-baseline border-t-2 border-[var(--color-jet)] px-4 md:px-4 py-3 md:py-4 cursor-default snap-left" style="animation-delay:0.16s">
+      <span class="service-num font-[var(--font-mono)] text-xs md:text-sm tracking-[0.2em] text-[var(--color-accent)] w-12 md:w-16 shrink-0 font-bold">05</span>
+      <span class="font-[var(--font-body)] text-base md:text-xl lg:text-2xl font-semibold tracking-[0.02em] uppercase">Massagen</span>
+    </div>
+    <div class="service-row flex items-baseline border-t-2 border-[var(--color-jet)] px-4 md:px-4 py-3 md:py-4 cursor-default snap-left" style="animation-delay:0.20s">
+      <span class="service-num font-[var(--font-mono)] text-xs md:text-sm tracking-[0.2em] text-[var(--color-accent)] w-12 md:w-16 shrink-0 font-bold">06</span>
+      <span class="font-[var(--font-body)] text-base md:text-xl lg:text-2xl font-semibold tracking-[0.02em] uppercase">Waerme- / Kaelteanwendungen</span>
+    </div>
+    <div class="service-row flex items-baseline border-t-2 border-[var(--color-jet)] px-4 md:px-4 py-3 md:py-4 cursor-default snap-left" style="animation-delay:0.24s">
+      <span class="service-num font-[var(--font-mono)] text-xs md:text-sm tracking-[0.2em] text-[var(--color-accent)] w-12 md:w-16 shrink-0 font-bold">07</span>
+      <span class="font-[var(--font-body)] text-base md:text-xl lg:text-2xl font-semibold tracking-[0.02em] uppercase">Elektrotherapie</span>
+    </div>
+    <div class="service-row flex items-baseline border-t-2 border-[var(--color-jet)] px-4 md:px-4 py-3 md:py-4 cursor-default snap-left" style="animation-delay:0.28s">
+      <span class="service-num font-[var(--font-mono)] text-xs md:text-sm tracking-[0.2em] text-[var(--color-accent)] w-12 md:w-16 shrink-0 font-bold">08</span>
+      <span class="font-[var(--font-body)] text-base md:text-xl lg:text-2xl font-semibold tracking-[0.02em] uppercase">Galileo-Vibrationstraining</span>
+    </div>
+    <div class="service-row flex items-baseline border-t-2 border-[var(--color-jet)] px-4 md:px-4 py-3 md:py-4 cursor-default snap-left" style="animation-delay:0.32s">
+      <span class="service-num font-[var(--font-mono)] text-xs md:text-sm tracking-[0.2em] text-[var(--color-accent)] w-12 md:w-16 shrink-0 font-bold">09</span>
+      <span class="font-[var(--font-body)] text-base md:text-xl lg:text-2xl font-semibold tracking-[0.02em] uppercase">CMD-Behandlung</span>
+    </div>
+    <div class="service-row flex items-baseline border-t-2 border-[var(--color-jet)] px-4 md:px-4 py-3 md:py-4 cursor-default snap-left" style="animation-delay:0.36s">
+      <span class="service-num font-[var(--font-mono)] text-xs md:text-sm tracking-[0.2em] text-[var(--color-accent)] w-12 md:w-16 shrink-0 font-bold">10</span>
+      <span class="font-[var(--font-body)] text-base md:text-xl lg:text-2xl font-semibold tracking-[0.02em] uppercase">Triggerpunktbehandlung</span>
+    </div>
+    <div class="service-row flex items-baseline border-t-2 border-[var(--color-jet)] px-4 md:px-4 py-3 md:py-4 cursor-default snap-left" style="animation-delay:0.40s">
+      <span class="service-num font-[var(--font-mono)] text-xs md:text-sm tracking-[0.2em] text-[var(--color-accent)] w-12 md:w-16 shrink-0 font-bold">11</span>
+      <span class="font-[var(--font-body)] text-base md:text-xl lg:text-2xl font-semibold tracking-[0.02em] uppercase">Beckenbodentraining</span>
+    </div>
+    <div class="service-row flex items-baseline border-t-2 border-[var(--color-jet)] px-4 md:px-4 py-3 md:py-4 cursor-default snap-left" style="animation-delay:0.44s">
+      <span class="service-num font-[var(--font-mono)] text-xs md:text-sm tracking-[0.2em] text-[var(--color-accent)] w-12 md:w-16 shrink-0 font-bold">12</span>
+      <span class="font-[var(--font-body)] text-base md:text-xl lg:text-2xl font-semibold tracking-[0.02em] uppercase">Kinesio-Taping</span>
+    </div>
+    <div class="service-row flex items-baseline border-t-2 border-[var(--color-jet)] border-b-2 px-4 md:px-4 py-3 md:py-4 cursor-default snap-left" style="animation-delay:0.48s">
+      <span class="service-num font-[var(--font-mono)] text-xs md:text-sm tracking-[0.2em] text-[var(--color-accent)] w-12 md:w-16 shrink-0 font-bold">13</span>
+      <span class="font-[var(--font-body)] text-base md:text-xl lg:text-2xl font-semibold tracking-[0.02em] uppercase">Personal-Training</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ABOUT / UEBER ========== -->
+<section id="ueber" class="relative border-b-[6px] border-[var(--color-jet)]">
+  <div class="grid grid-cols-1 lg:grid-cols-12">
+
+    <!-- Left block: black -->
+    <div class="lg:col-span-5 bg-[var(--color-jet)] text-[var(--color-offwhite)] p-8 md:p-12 lg:p-16 flex flex-col justify-center min-h-[50vh]">
+      <span class="font-[var(--font-mono)] text-xs tracking-[0.4em] uppercase text-[var(--color-accent)] mb-6 block snap-in">Therapeut</span>
+      <h2 class="font-[var(--font-mono)] text-[12vw] md:text-[6rem] lg:text-[5rem] font-bold leading-[0.9] tracking-[-0.03em] uppercase mb-8 snap-in">
+        ELMAR<br>DAMM
+      </h2>
+      <div class="h-1 w-16 bg-[var(--color-accent)] mb-8 hard-reveal"></div>
+    </div>
+
+    <!-- Right block: text -->
+    <div class="lg:col-span-7 p-8 md:p-12 lg:p-16 flex flex-col justify-center relative halftone">
+      <div class="bg-[var(--color-offwhite)] p-6 md:p-10 border-4 border-[var(--color-jet)]">
+        <p class="font-[var(--font-body)] text-lg md:text-xl lg:text-2xl leading-relaxed font-medium snap-in">
+          Staatlich anerkannter Physiotherapeut mit jahrelanger Erfahrung. Kein Wellness-Gerede, keine leeren Versprechen.
+        </p>
+        <p class="font-[var(--font-body)] text-lg md:text-xl lg:text-2xl leading-relaxed font-medium mt-6 snap-in" style="animation-delay:0.1s">
+          Evidenzbasierte Therapie, die wirkt. Individuelle Behandlung, klare Kommunikation, messbare Ergebnisse.
+        </p>
+        <p class="font-[var(--font-body)] text-lg md:text-xl lg:text-2xl leading-relaxed font-medium mt-6 snap-in" style="animation-delay:0.2s">
+          Hier wird gearbeitet &mdash; an Ihrer Gesundheit.
+        </p>
+        <div class="mt-8 pt-6 border-t-2 border-[var(--color-jet)] snap-in" style="animation-delay:0.3s">
+          <span class="font-[var(--font-mono)] text-xs tracking-[0.3em] uppercase text-[var(--color-concrete)]">Alle Kassen / Privat / Selbstzahler</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SECOND MARQUEE ========== -->
+<div class="bg-[var(--color-accent)] text-[var(--color-offwhite)] py-3 overflow-hidden border-b-[6px] border-[var(--color-jet)]">
+  <div class="flex whitespace-nowrap marquee-track" style="width: max-content; animation-direction: reverse; animation-duration: 15s;">
+    <span class="font-[var(--font-mono)] text-sm md:text-lg tracking-[0.4em] uppercase font-bold">
+      BEWEGEN &bull; HEILEN &bull; STARK WERDEN &bull; BEWEGEN &bull; HEILEN &bull; STARK WERDEN &bull; BEWEGEN &bull; HEILEN &bull; STARK WERDEN &bull;&nbsp;
+    </span>
+    <span class="font-[var(--font-mono)] text-sm md:text-lg tracking-[0.4em] uppercase font-bold">
+      BEWEGEN &bull; HEILEN &bull; STARK WERDEN &bull; BEWEGEN &bull; HEILEN &bull; STARK WERDEN &bull; BEWEGEN &bull; HEILEN &bull; STARK WERDEN &bull;&nbsp;
+    </span>
+  </div>
+</div>
+
+<!-- ========== KONTAKT ========== -->
+<section id="kontakt" class="relative">
+  <div class="grid grid-cols-1 lg:grid-cols-2">
+
+    <!-- Left: Contact info -->
+    <div class="p-8 md:p-12 lg:p-16 border-b-[6px] lg:border-b-0 lg:border-r-[6px] border-[var(--color-jet)]">
+      <span class="font-[var(--font-mono)] text-xs tracking-[0.4em] uppercase text-[var(--color-accent)] mb-4 block snap-in">Kontakt</span>
+      <h2 class="font-[var(--font-mono)] text-[10vw] md:text-[5rem] lg:text-[4rem] font-bold leading-[0.9] tracking-[-0.03em] uppercase mb-10 snap-in">
+        TERMIN<br>VEREINBAREN.
+      </h2>
+
+      <div class="space-y-8">
+        <!-- Phone -->
+        <div class="snap-in" style="animation-delay:0.1s">
+          <span class="font-[var(--font-mono)] text-xs tracking-[0.3em] uppercase text-[var(--color-concrete)] block mb-1">Telefon</span>
+          <a href="tel:022158988779" class="font-[var(--font-body)] text-2xl md:text-3xl font-bold tracking-[0.02em] brutal-link">0221-58988779</a>
+        </div>
+
+        <!-- Email -->
+        <div class="snap-in" style="animation-delay:0.15s">
+          <span class="font-[var(--font-mono)] text-xs tracking-[0.3em] uppercase text-[var(--color-concrete)] block mb-1">E-Mail</span>
+          <a href="mailto:mail@physio-damm.de" class="font-[var(--font-body)] text-xl md:text-2xl font-bold tracking-[0.02em] brutal-link">mail@physio-damm.de</a>
+        </div>
+
+        <!-- CTA -->
+        <div class="snap-in" style="animation-delay:0.2s">
+          <a href="tel:022158988779" class="inline-block bg-[var(--color-jet)] text-[var(--color-offwhite)] font-[var(--font-mono)] text-sm tracking-[0.3em] uppercase font-bold px-8 py-4 border-4 border-[var(--color-jet)] jolt cursor-pointer">
+            Jetzt anrufen &#8594;
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Address + Map-like area -->
+    <div class="bg-[var(--color-jet)] text-[var(--color-offwhite)] p-8 md:p-12 lg:p-16 flex flex-col justify-between min-h-[50vh]">
+
+      <div>
+        <span class="font-[var(--font-mono)] text-xs tracking-[0.4em] uppercase text-[var(--color-accent)] mb-4 block snap-in">Adresse</span>
+        <div class="snap-in" style="animation-delay:0.1s">
+          <p class="font-[var(--font-body)] text-xl md:text-2xl font-bold tracking-[0.02em] leading-relaxed">
+            Jungbluthgasse 5<br>
+            1. Stock (Aufzug vorhanden)<br>
+            50858 Koeln-Junkersdorf
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-12">
+        <span class="font-[var(--font-mono)] text-xs tracking-[0.4em] uppercase text-[var(--color-accent)] mb-4 block snap-in" style="animation-delay:0.2s">Anfahrt</span>
+        <div class="snap-in" style="animation-delay:0.25s">
+          <p class="font-[var(--font-body)] text-lg font-medium leading-relaxed">
+            Bus Linie 143<br>
+            Haltestelle &bdquo;Beethovenstrasse&ldquo;
+          </p>
+        </div>
+      </div>
+
+      <!-- Large decorative cross/plus -->
+      <div class="mt-12 flex items-end justify-end snap-in" style="animation-delay:0.3s">
+        <span class="font-[var(--font-mono)] text-[8rem] md:text-[12rem] leading-none text-[var(--color-accent)] opacity-20 select-none" aria-hidden="true">+</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="bg-[var(--color-jet)] text-[var(--color-offwhite)] border-t-[6px] border-[var(--color-accent)]">
+  <div class="px-4 md:px-8 py-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+    <div class="font-[var(--font-mono)] text-xs tracking-[0.2em] uppercase">
+      <span class="text-[var(--color-accent)] font-bold">PHYSIO DAMM</span>
+      <span class="mx-2 opacity-40">|</span>
+      <span class="text-[var(--color-concrete)]">Physiotherapiepraxis Koeln-Junkersdorf</span>
+    </div>
+    <div class="font-[var(--font-mono)] text-xs tracking-[0.15em] uppercase text-[var(--color-concrete)]">
+      <a href="#" class="brutal-link hover:text-[var(--color-offwhite)]">Impressum</a>
+      <span class="mx-2 opacity-40">|</span>
+      <a href="#" class="brutal-link hover:text-[var(--color-offwhite)]">Datenschutz</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== SCROLL ANIMATIONS ========== -->
+<script>
+  // Intersection Observer for snap-in animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Get the delay from the style attribute
+        const delay = entry.target.style.animationDelay || '0s';
+        const delayMs = parseFloat(delay) * 1000;
+
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, delayMs);
+
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  // Observe all animated elements
+  document.querySelectorAll('.snap-in, .snap-left, .snap-right, .hard-reveal').forEach(el => {
+    observer.observe(el);
+  });
+
+  // Smooth scroll for nav links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href === '#') return;
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
