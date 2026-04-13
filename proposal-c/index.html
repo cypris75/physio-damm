@@ -11,9 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style type="text/tailwindcss">
         @theme {
-            --color-brand: #0891B2;
-            --color-brand-light: #06B6D4;
-            --color-brand-pale: #ECFEFF;
+            --color-physio: #0891B2;
+            --color-physio-light: #06B6D4;
+            --color-physio-pale: #ECFEFF;
             --color-navy: #0F172A;
             --color-gray-warm: #64748B;
             --color-surface: #FAFBFC;
@@ -260,20 +260,20 @@
             <div class="flex items-center justify-between h-18">
                 <!-- Logo -->
                 <a href="#" class="flex items-center gap-3 group">
-                    <div class="w-9 h-9 bg-brand rounded flex items-center justify-center relative">
+                    <div class="w-9 h-9 bg-physio rounded flex items-center justify-center relative">
                         <span class="text-white font-[var(--font-heading)] font-bold text-sm">P</span>
-                        <div class="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 border border-brand rounded-full bg-white"></div>
+                        <div class="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 border border-physio rounded-full bg-white"></div>
                     </div>
                     <span class="font-[var(--font-heading)] text-lg font-bold tracking-[0.2em] text-navy">PHYSIO DAMM</span>
                 </a>
                 <!-- Desktop Nav -->
                 <div class="hidden md:flex items-center gap-8">
-                    <a href="#start" class="text-sm font-medium text-gray-warm hover:text-brand transition-colors">Startseite</a>
-                    <a href="#leistungen" class="text-sm font-medium text-gray-warm hover:text-brand transition-colors">Leistungen</a>
-                    <a href="#ueber-uns" class="text-sm font-medium text-gray-warm hover:text-brand transition-colors">Über uns</a>
-                    <a href="#kontakt" class="text-sm font-medium text-gray-warm hover:text-brand transition-colors">Kontakt</a>
-                    <a href="#impressum" class="text-sm font-medium text-gray-warm hover:text-brand transition-colors">Impressum</a>
-                    <a href="tel:022158988779" class="inline-flex items-center gap-2 bg-brand text-white text-sm font-semibold px-5 py-2.5 rounded hover:bg-brand-light transition-colors">
+                    <a href="#start" class="text-sm font-medium text-gray-warm hover:text-physio transition-colors">Startseite</a>
+                    <a href="#leistungen" class="text-sm font-medium text-gray-warm hover:text-physio transition-colors">Leistungen</a>
+                    <a href="#ueber-uns" class="text-sm font-medium text-gray-warm hover:text-physio transition-colors">Über uns</a>
+                    <a href="#kontakt" class="text-sm font-medium text-gray-warm hover:text-physio transition-colors">Kontakt</a>
+                    <a href="#impressum" class="text-sm font-medium text-gray-warm hover:text-physio transition-colors">Impressum</a>
+                    <a href="tel:022158988779" class="inline-flex items-center gap-2 bg-physio text-white text-sm font-semibold px-5 py-2.5 rounded hover:bg-physio-light transition-colors">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                         Anrufen
                     </a>
@@ -288,12 +288,12 @@
             <!-- Mobile menu -->
             <div id="mobileMenu" class="mobile-menu md:hidden">
                 <div class="py-4 border-t border-surface-alt flex flex-col gap-3">
-                    <a href="#start" class="text-sm font-medium text-gray-warm hover:text-brand py-2">Startseite</a>
-                    <a href="#leistungen" class="text-sm font-medium text-gray-warm hover:text-brand py-2">Leistungen</a>
-                    <a href="#ueber-uns" class="text-sm font-medium text-gray-warm hover:text-brand py-2">Über uns</a>
-                    <a href="#kontakt" class="text-sm font-medium text-gray-warm hover:text-brand py-2">Kontakt</a>
-                    <a href="#impressum" class="text-sm font-medium text-gray-warm hover:text-brand py-2">Impressum</a>
-                    <a href="tel:022158988779" class="inline-flex items-center justify-center gap-2 bg-brand text-white text-sm font-semibold px-5 py-2.5 rounded mt-2">
+                    <a href="#start" class="text-sm font-medium text-gray-warm hover:text-physio py-2">Startseite</a>
+                    <a href="#leistungen" class="text-sm font-medium text-gray-warm hover:text-physio py-2">Leistungen</a>
+                    <a href="#ueber-uns" class="text-sm font-medium text-gray-warm hover:text-physio py-2">Über uns</a>
+                    <a href="#kontakt" class="text-sm font-medium text-gray-warm hover:text-physio py-2">Kontakt</a>
+                    <a href="#impressum" class="text-sm font-medium text-gray-warm hover:text-physio py-2">Impressum</a>
+                    <a href="tel:022158988779" class="inline-flex items-center justify-center gap-2 bg-physio text-white text-sm font-semibold px-5 py-2.5 rounded mt-2">
                         Jetzt anrufen
                     </a>
                 </div>
@@ -310,7 +310,7 @@
         <div class="geo-cross" style="bottom: 20%; left: 15%;"></div>
 
         <!-- Teal accent line left -->
-        <div class="absolute left-0 top-1/4 w-1 h-32 bg-gradient-to-b from-transparent via-brand to-transparent opacity-20 hidden lg:block"></div>
+        <div class="absolute left-0 top-1/4 w-1 h-32 bg-gradient-to-b from-transparent via-physio to-transparent opacity-20 hidden lg:block"></div>
 
         <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full">
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
@@ -318,29 +318,29 @@
                 <div class="slide-left">
                     <div class="flex items-center gap-3 mb-6">
                         <div class="accent-line"></div>
-                        <span class="text-brand text-sm font-semibold tracking-wider uppercase font-[var(--font-heading)]">Physiotherapie in Köln</span>
+                        <span class="text-physio text-sm font-semibold tracking-wider uppercase font-[var(--font-heading)]">Physiotherapie in Köln</span>
                     </div>
                     <h1 class="font-[var(--font-heading)] text-4xl sm:text-5xl lg:text-6xl font-bold text-navy leading-[1.1] mb-6">
                         Professionelle<br>
-                        <span class="text-brand">Physiotherapie</span><br>
+                        <span class="text-physio">Physiotherapie</span><br>
                         in Köln-Junkersdorf
                     </h1>
                     <p class="text-xl text-gray-warm mb-4 max-w-lg leading-relaxed">
                         Ihr Wohlbefinden ist unsere Expertise
                     </p>
                     <div class="flex items-center gap-2 text-sm text-gray-warm mb-8">
-                        <svg class="w-4 h-4 text-brand shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        <svg class="w-4 h-4 text-physio shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                         <span>Alle Kassen und privat</span>
                         <span class="mx-2 text-surface-alt">|</span>
-                        <svg class="w-4 h-4 text-brand shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        <svg class="w-4 h-4 text-physio shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                         <span>Termine nach Vereinbarung</span>
                     </div>
                     <div class="flex flex-wrap items-center gap-4">
-                        <a href="tel:022158988779" class="cta-btn inline-flex items-center gap-2 bg-brand text-white font-semibold px-7 py-3.5 rounded hover:bg-brand-light transition-colors shadow-lg shadow-brand/20">
+                        <a href="tel:022158988779" class="cta-btn inline-flex items-center gap-2 bg-physio text-white font-semibold px-7 py-3.5 rounded hover:bg-physio-light transition-colors shadow-lg shadow-physio/20">
                             Termin vereinbaren
                             <svg class="w-5 h-5 cta-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                         </a>
-                        <a href="#leistungen" class="inline-flex items-center gap-2 text-navy font-semibold px-6 py-3.5 rounded border border-surface-alt hover:border-brand/30 transition-colors">
+                        <a href="#leistungen" class="inline-flex items-center gap-2 text-navy font-semibold px-6 py-3.5 rounded border border-surface-alt hover:border-physio/30 transition-colors">
                             Unsere Leistungen
                         </a>
                     </div>
@@ -389,34 +389,34 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 slide-up">
                 <div class="text-center">
-                    <div class="font-[var(--font-heading)] text-3xl lg:text-4xl font-bold text-brand counter" data-target="25">0</div>
+                    <div class="font-[var(--font-heading)] text-3xl lg:text-4xl font-bold text-physio counter" data-target="25">0</div>
                     <div class="text-sm text-gray-warm mt-1">Jahre Erfahrung</div>
-                    <div class="w-12 h-0.5 bg-brand/20 mx-auto mt-3 counter-bar rounded-full overflow-hidden">
-                        <div class="h-full bg-brand rounded-full"></div>
+                    <div class="w-12 h-0.5 bg-physio/20 mx-auto mt-3 counter-bar rounded-full overflow-hidden">
+                        <div class="h-full bg-physio rounded-full"></div>
                     </div>
                 </div>
                 <div class="text-center">
-                    <div class="font-[var(--font-heading)] text-3xl lg:text-4xl font-bold text-brand counter" data-target="13">0</div>
+                    <div class="font-[var(--font-heading)] text-3xl lg:text-4xl font-bold text-physio counter" data-target="13">0</div>
                     <div class="text-sm text-gray-warm mt-1">Therapiebereiche</div>
-                    <div class="w-12 h-0.5 bg-brand/20 mx-auto mt-3 counter-bar rounded-full overflow-hidden">
-                        <div class="h-full bg-brand rounded-full"></div>
+                    <div class="w-12 h-0.5 bg-physio/20 mx-auto mt-3 counter-bar rounded-full overflow-hidden">
+                        <div class="h-full bg-physio rounded-full"></div>
                     </div>
                 </div>
                 <div class="text-center">
                     <div class="flex items-center justify-center gap-1">
-                        <div class="font-[var(--font-heading)] text-3xl lg:text-4xl font-bold text-brand">100</div>
-                        <span class="font-[var(--font-heading)] text-xl font-bold text-brand">%</span>
+                        <div class="font-[var(--font-heading)] text-3xl lg:text-4xl font-bold text-physio">100</div>
+                        <span class="font-[var(--font-heading)] text-xl font-bold text-physio">%</span>
                     </div>
                     <div class="text-sm text-gray-warm mt-1">Kassenleistung</div>
-                    <div class="w-12 h-0.5 bg-brand/20 mx-auto mt-3 counter-bar rounded-full overflow-hidden">
-                        <div class="h-full bg-brand rounded-full"></div>
+                    <div class="w-12 h-0.5 bg-physio/20 mx-auto mt-3 counter-bar rounded-full overflow-hidden">
+                        <div class="h-full bg-physio rounded-full"></div>
                     </div>
                 </div>
                 <div class="text-center">
-                    <div class="font-[var(--font-heading)] text-3xl lg:text-4xl font-bold text-brand">1:1</div>
+                    <div class="font-[var(--font-heading)] text-3xl lg:text-4xl font-bold text-physio">1:1</div>
                     <div class="text-sm text-gray-warm mt-1">Einzelbehandlung</div>
-                    <div class="w-12 h-0.5 bg-brand/20 mx-auto mt-3 counter-bar rounded-full overflow-hidden">
-                        <div class="h-full bg-brand rounded-full"></div>
+                    <div class="w-12 h-0.5 bg-physio/20 mx-auto mt-3 counter-bar rounded-full overflow-hidden">
+                        <div class="h-full bg-physio rounded-full"></div>
                     </div>
                 </div>
             </div>
@@ -434,7 +434,7 @@
             <div class="max-w-2xl mb-16 slide-up">
                 <div class="flex items-center gap-3 mb-4">
                     <div class="accent-line"></div>
-                    <span class="text-brand text-sm font-semibold tracking-wider uppercase font-[var(--font-heading)]">Leistungen</span>
+                    <span class="text-physio text-sm font-semibold tracking-wider uppercase font-[var(--font-heading)]">Leistungen</span>
                 </div>
                 <h2 class="font-[var(--font-heading)] text-3xl sm:text-4xl font-bold text-navy mb-4">
                     Unser Behandlungsspektrum
@@ -447,72 +447,72 @@
             <!-- Classic services -->
             <div class="mb-12 slide-up">
                 <h3 class="font-[var(--font-heading)] text-sm font-semibold tracking-wider uppercase text-gray-warm mb-6 flex items-center gap-3">
-                    <span class="w-2 h-2 bg-brand rounded-full"></span>
+                    <span class="w-2 h-2 bg-physio rounded-full"></span>
                     Klassische Physiotherapie
                 </h3>
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
 
                     <div class="service-card bg-white border border-surface-alt rounded p-6 relative group">
-                        <div class="w-10 h-10 bg-brand-pale rounded flex items-center justify-center mb-4 group-hover:bg-brand/10 transition-colors">
-                            <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
+                        <div class="w-10 h-10 bg-physio-pale rounded flex items-center justify-center mb-4 group-hover:bg-physio/10 transition-colors">
+                            <svg class="w-5 h-5 text-physio" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
                         </div>
                         <h4 class="font-[var(--font-heading)] font-semibold text-navy mb-1">Krankengymnastik</h4>
                         <p class="text-sm text-gray-warm">Aktive und passive Bewegungstherapie zur Wiederherstellung der Beweglichkeit</p>
-                        <div class="absolute top-0 left-0 w-0 h-0.5 bg-brand group-hover:w-full transition-all duration-500"></div>
+                        <div class="absolute top-0 left-0 w-0 h-0.5 bg-physio group-hover:w-full transition-all duration-500"></div>
                     </div>
 
                     <div class="service-card bg-white border border-surface-alt rounded p-6 relative group">
-                        <div class="w-10 h-10 bg-brand-pale rounded flex items-center justify-center mb-4 group-hover:bg-brand/10 transition-colors">
-                            <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"/></svg>
+                        <div class="w-10 h-10 bg-physio-pale rounded flex items-center justify-center mb-4 group-hover:bg-physio/10 transition-colors">
+                            <svg class="w-5 h-5 text-physio" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"/></svg>
                         </div>
                         <h4 class="font-[var(--font-heading)] font-semibold text-navy mb-1">Manuelle Therapie</h4>
                         <p class="text-sm text-gray-warm">Gezielte Handgrifftechniken zur Behandlung von Funktionsstörungen</p>
-                        <div class="absolute top-0 left-0 w-0 h-0.5 bg-brand group-hover:w-full transition-all duration-500"></div>
+                        <div class="absolute top-0 left-0 w-0 h-0.5 bg-physio group-hover:w-full transition-all duration-500"></div>
                     </div>
 
                     <div class="service-card bg-white border border-surface-alt rounded p-6 relative group">
-                        <div class="w-10 h-10 bg-brand-pale rounded flex items-center justify-center mb-4 group-hover:bg-brand/10 transition-colors">
-                            <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                        <div class="w-10 h-10 bg-physio-pale rounded flex items-center justify-center mb-4 group-hover:bg-physio/10 transition-colors">
+                            <svg class="w-5 h-5 text-physio" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
                         </div>
                         <h4 class="font-[var(--font-heading)] font-semibold text-navy mb-1">Lymphdrainage</h4>
                         <p class="text-sm text-gray-warm">Sanfte Entstauungstherapie zur Förderung des Lymphabflusses</p>
-                        <div class="absolute top-0 left-0 w-0 h-0.5 bg-brand group-hover:w-full transition-all duration-500"></div>
+                        <div class="absolute top-0 left-0 w-0 h-0.5 bg-physio group-hover:w-full transition-all duration-500"></div>
                     </div>
 
                     <div class="service-card bg-white border border-surface-alt rounded p-6 relative group">
-                        <div class="w-10 h-10 bg-brand-pale rounded flex items-center justify-center mb-4 group-hover:bg-brand/10 transition-colors">
-                            <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                        <div class="w-10 h-10 bg-physio-pale rounded flex items-center justify-center mb-4 group-hover:bg-physio/10 transition-colors">
+                            <svg class="w-5 h-5 text-physio" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
                         </div>
                         <h4 class="font-[var(--font-heading)] font-semibold text-navy mb-1">KG auf neurophysiol. Basis</h4>
                         <p class="text-sm text-gray-warm">Krankengymnastik bei neurologischen Erkrankungen</p>
-                        <div class="absolute top-0 left-0 w-0 h-0.5 bg-brand group-hover:w-full transition-all duration-500"></div>
+                        <div class="absolute top-0 left-0 w-0 h-0.5 bg-physio group-hover:w-full transition-all duration-500"></div>
                     </div>
 
                     <div class="service-card bg-white border border-surface-alt rounded p-6 relative group">
-                        <div class="w-10 h-10 bg-brand-pale rounded flex items-center justify-center mb-4 group-hover:bg-brand/10 transition-colors">
-                            <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                        <div class="w-10 h-10 bg-physio-pale rounded flex items-center justify-center mb-4 group-hover:bg-physio/10 transition-colors">
+                            <svg class="w-5 h-5 text-physio" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
                         </div>
                         <h4 class="font-[var(--font-heading)] font-semibold text-navy mb-1">Massagen</h4>
                         <p class="text-sm text-gray-warm">Therapeutische Massagen zur Lockerung und Entspannung</p>
-                        <div class="absolute top-0 left-0 w-0 h-0.5 bg-brand group-hover:w-full transition-all duration-500"></div>
+                        <div class="absolute top-0 left-0 w-0 h-0.5 bg-physio group-hover:w-full transition-all duration-500"></div>
                     </div>
 
                     <div class="service-card bg-white border border-surface-alt rounded p-6 relative group">
-                        <div class="w-10 h-10 bg-brand-pale rounded flex items-center justify-center mb-4 group-hover:bg-brand/10 transition-colors">
-                            <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/></svg>
+                        <div class="w-10 h-10 bg-physio-pale rounded flex items-center justify-center mb-4 group-hover:bg-physio/10 transition-colors">
+                            <svg class="w-5 h-5 text-physio" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/></svg>
                         </div>
                         <h4 class="font-[var(--font-heading)] font-semibold text-navy mb-1">Wärme-/Kälteanwendungen</h4>
                         <p class="text-sm text-gray-warm">Thermotherapie zur Schmerzlinderung und Durchblutungsförderung</p>
-                        <div class="absolute top-0 left-0 w-0 h-0.5 bg-brand group-hover:w-full transition-all duration-500"></div>
+                        <div class="absolute top-0 left-0 w-0 h-0.5 bg-physio group-hover:w-full transition-all duration-500"></div>
                     </div>
 
                     <div class="service-card bg-white border border-surface-alt rounded p-6 relative group">
-                        <div class="w-10 h-10 bg-brand-pale rounded flex items-center justify-center mb-4 group-hover:bg-brand/10 transition-colors">
-                            <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        <div class="w-10 h-10 bg-physio-pale rounded flex items-center justify-center mb-4 group-hover:bg-physio/10 transition-colors">
+                            <svg class="w-5 h-5 text-physio" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                         </div>
                         <h4 class="font-[var(--font-heading)] font-semibold text-navy mb-1">Elektrotherapie</h4>
                         <p class="text-sm text-gray-warm">Schmerztherapie und Muskelstimulation durch elektrische Impulse</p>
-                        <div class="absolute top-0 left-0 w-0 h-0.5 bg-brand group-hover:w-full transition-all duration-500"></div>
+                        <div class="absolute top-0 left-0 w-0 h-0.5 bg-physio group-hover:w-full transition-all duration-500"></div>
                     </div>
 
                 </div>
@@ -521,63 +521,63 @@
             <!-- Specialized services -->
             <div class="slide-up">
                 <h3 class="font-[var(--font-heading)] text-sm font-semibold tracking-wider uppercase text-gray-warm mb-6 flex items-center gap-3">
-                    <span class="w-2 h-2 bg-brand-light rounded-full"></span>
+                    <span class="w-2 h-2 bg-physio-light rounded-full"></span>
                     Spezialbehandlungen
                 </h3>
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
 
                     <div class="service-card bg-surface border border-surface-alt rounded p-6 relative group">
                         <div class="w-10 h-10 bg-white rounded flex items-center justify-center mb-4 shadow-sm group-hover:shadow transition-shadow">
-                            <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                            <svg class="w-5 h-5 text-physio" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
                         </div>
                         <h4 class="font-[var(--font-heading)] font-semibold text-navy mb-1">Galileo-Vibrationstraining</h4>
                         <p class="text-sm text-gray-warm">Effektives Training durch seitenalternierende Vibration</p>
-                        <div class="absolute top-0 left-0 w-0 h-0.5 bg-brand-light group-hover:w-full transition-all duration-500"></div>
+                        <div class="absolute top-0 left-0 w-0 h-0.5 bg-physio-light group-hover:w-full transition-all duration-500"></div>
                     </div>
 
                     <div class="service-card bg-surface border border-surface-alt rounded p-6 relative group">
                         <div class="w-10 h-10 bg-white rounded flex items-center justify-center mb-4 shadow-sm group-hover:shadow transition-shadow">
-                            <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <svg class="w-5 h-5 text-physio" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                         </div>
                         <h4 class="font-[var(--font-heading)] font-semibold text-navy mb-1">CMD-Behandlung</h4>
                         <p class="text-sm text-gray-warm">Therapie bei Kiefergelenksbeschwerden und Fehlfunktionen</p>
-                        <div class="absolute top-0 left-0 w-0 h-0.5 bg-brand-light group-hover:w-full transition-all duration-500"></div>
+                        <div class="absolute top-0 left-0 w-0 h-0.5 bg-physio-light group-hover:w-full transition-all duration-500"></div>
                     </div>
 
                     <div class="service-card bg-surface border border-surface-alt rounded p-6 relative group">
                         <div class="w-10 h-10 bg-white rounded flex items-center justify-center mb-4 shadow-sm group-hover:shadow transition-shadow">
-                            <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            <svg class="w-5 h-5 text-physio" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                         </div>
                         <h4 class="font-[var(--font-heading)] font-semibold text-navy mb-1">Triggerpunktbehandlung</h4>
                         <p class="text-sm text-gray-warm">Gezielte Therapie myofaszialer Schmerzpunkte</p>
-                        <div class="absolute top-0 left-0 w-0 h-0.5 bg-brand-light group-hover:w-full transition-all duration-500"></div>
+                        <div class="absolute top-0 left-0 w-0 h-0.5 bg-physio-light group-hover:w-full transition-all duration-500"></div>
                     </div>
 
                     <div class="service-card bg-surface border border-surface-alt rounded p-6 relative group">
                         <div class="w-10 h-10 bg-white rounded flex items-center justify-center mb-4 shadow-sm group-hover:shadow transition-shadow">
-                            <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <svg class="w-5 h-5 text-physio" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                         </div>
                         <h4 class="font-[var(--font-heading)] font-semibold text-navy mb-1">Beckenbodentraining</h4>
                         <p class="text-sm text-gray-warm">Spezialisierte Kräftigung der Beckenbodenmuskulatur</p>
-                        <div class="absolute top-0 left-0 w-0 h-0.5 bg-brand-light group-hover:w-full transition-all duration-500"></div>
+                        <div class="absolute top-0 left-0 w-0 h-0.5 bg-physio-light group-hover:w-full transition-all duration-500"></div>
                     </div>
 
                     <div class="service-card bg-surface border border-surface-alt rounded p-6 relative group">
                         <div class="w-10 h-10 bg-white rounded flex items-center justify-center mb-4 shadow-sm group-hover:shadow transition-shadow">
-                            <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+                            <svg class="w-5 h-5 text-physio" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
                         </div>
                         <h4 class="font-[var(--font-heading)] font-semibold text-navy mb-1">Kinesio-Taping</h4>
                         <p class="text-sm text-gray-warm">Funktionelle Klebetechnik zur Stabilisierung und Schmerzlinderung</p>
-                        <div class="absolute top-0 left-0 w-0 h-0.5 bg-brand-light group-hover:w-full transition-all duration-500"></div>
+                        <div class="absolute top-0 left-0 w-0 h-0.5 bg-physio-light group-hover:w-full transition-all duration-500"></div>
                     </div>
 
                     <div class="service-card bg-surface border border-surface-alt rounded p-6 relative group">
                         <div class="w-10 h-10 bg-white rounded flex items-center justify-center mb-4 shadow-sm group-hover:shadow transition-shadow">
-                            <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                            <svg class="w-5 h-5 text-physio" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
                         </div>
                         <h4 class="font-[var(--font-heading)] font-semibold text-navy mb-1">Personal-Training</h4>
                         <p class="text-sm text-gray-warm">Individuelles Training zur nachhaltigen Gesundheitsförderung</p>
-                        <div class="absolute top-0 left-0 w-0 h-0.5 bg-brand-light group-hover:w-full transition-all duration-500"></div>
+                        <div class="absolute top-0 left-0 w-0 h-0.5 bg-physio-light group-hover:w-full transition-all duration-500"></div>
                     </div>
 
                 </div>
@@ -600,13 +600,13 @@
                             <!-- Geometric placeholder art -->
                             <div class="absolute inset-0 flex items-center justify-center">
                                 <div class="relative">
-                                    <div class="w-40 h-40 border-2 border-brand/15 rounded-full"></div>
-                                    <div class="w-28 h-28 border-2 border-brand/10 rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-                                    <div class="w-16 h-16 bg-brand/8 rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+                                    <div class="w-40 h-40 border-2 border-physio/15 rounded-full"></div>
+                                    <div class="w-28 h-28 border-2 border-physio/10 rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+                                    <div class="w-16 h-16 bg-physio/8 rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
                                     <!-- Medical cross -->
                                     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                                        <div class="w-1 h-8 bg-brand/20 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"></div>
-                                        <div class="w-8 h-1 bg-brand/20 absolute top-1/2 -translate-y-1/2 -translate-x-1/2 rounded-full"></div>
+                                        <div class="w-1 h-8 bg-physio/20 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"></div>
+                                        <div class="w-8 h-1 bg-physio/20 absolute top-1/2 -translate-y-1/2 -translate-x-1/2 rounded-full"></div>
                                     </div>
                                 </div>
                             </div>
@@ -619,7 +619,7 @@
                             </div>
                         </div>
                         <!-- Floating accent card -->
-                        <div class="absolute -bottom-4 -right-4 bg-brand text-white p-5 rounded shadow-lg shadow-brand/30 hidden sm:block">
+                        <div class="absolute -bottom-4 -right-4 bg-physio text-white p-5 rounded shadow-lg shadow-physio/30 hidden sm:block">
                             <div class="font-[var(--font-heading)] text-2xl font-bold">25+</div>
                             <div class="text-xs text-white/80">Jahre Erfahrung</div>
                         </div>
@@ -630,7 +630,7 @@
                 <div class="slide-right">
                     <div class="flex items-center gap-3 mb-4">
                         <div class="accent-line"></div>
-                        <span class="text-brand text-sm font-semibold tracking-wider uppercase font-[var(--font-heading)]">Über uns</span>
+                        <span class="text-physio text-sm font-semibold tracking-wider uppercase font-[var(--font-heading)]">Über uns</span>
                     </div>
                     <h2 class="font-[var(--font-heading)] text-3xl sm:text-4xl font-bold text-navy mb-6">
                         Kompetenz und Erfahrung<br>für Ihre Gesundheit
@@ -649,19 +649,19 @@
                     <!-- Qualifications -->
                     <div class="mt-8 grid sm:grid-cols-2 gap-3">
                         <div class="flex items-center gap-3 bg-white rounded p-3 border border-surface-alt">
-                            <svg class="w-5 h-5 text-brand shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <svg class="w-5 h-5 text-physio shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                             <span class="text-sm text-navy font-medium">Manuelle Therapie</span>
                         </div>
                         <div class="flex items-center gap-3 bg-white rounded p-3 border border-surface-alt">
-                            <svg class="w-5 h-5 text-brand shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <svg class="w-5 h-5 text-physio shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                             <span class="text-sm text-navy font-medium">Lymphdrainage</span>
                         </div>
                         <div class="flex items-center gap-3 bg-white rounded p-3 border border-surface-alt">
-                            <svg class="w-5 h-5 text-brand shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <svg class="w-5 h-5 text-physio shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                             <span class="text-sm text-navy font-medium">Neurophysiologische KG</span>
                         </div>
                         <div class="flex items-center gap-3 bg-white rounded p-3 border border-surface-alt">
-                            <svg class="w-5 h-5 text-brand shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <svg class="w-5 h-5 text-physio shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                             <span class="text-sm text-navy font-medium">CMD-Spezialist</span>
                         </div>
                     </div>
@@ -678,7 +678,7 @@
             <div class="max-w-2xl mb-16 slide-up">
                 <div class="flex items-center gap-3 mb-4">
                     <div class="accent-line"></div>
-                    <span class="text-brand text-sm font-semibold tracking-wider uppercase font-[var(--font-heading)]">Kontakt</span>
+                    <span class="text-physio text-sm font-semibold tracking-wider uppercase font-[var(--font-heading)]">Kontakt</span>
                 </div>
                 <h2 class="font-[var(--font-heading)] text-3xl sm:text-4xl font-bold text-navy mb-4">
                     So erreichen Sie uns
@@ -692,32 +692,32 @@
                 <!-- Contact cards -->
                 <div class="lg:col-span-2 space-y-4 slide-left">
                     <!-- Phone -->
-                    <a href="tel:022158988779" class="flex items-start gap-4 bg-white border border-surface-alt rounded p-5 group hover:border-brand/30 transition-colors">
-                        <div class="w-11 h-11 bg-brand-pale rounded flex items-center justify-center shrink-0 group-hover:bg-brand group-hover:text-white transition-colors">
-                            <svg class="w-5 h-5 text-brand group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    <a href="tel:022158988779" class="flex items-start gap-4 bg-white border border-surface-alt rounded p-5 group hover:border-physio/30 transition-colors">
+                        <div class="w-11 h-11 bg-physio-pale rounded flex items-center justify-center shrink-0 group-hover:bg-physio group-hover:text-white transition-colors">
+                            <svg class="w-5 h-5 text-physio group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                         </div>
                         <div>
                             <div class="font-[var(--font-heading)] font-semibold text-navy text-sm mb-0.5">Telefon</div>
-                            <div class="text-brand font-semibold">0221-58988779</div>
+                            <div class="text-physio font-semibold">0221-58988779</div>
                             <div class="text-xs text-gray-warm mt-1">Termine nach Vereinbarung</div>
                         </div>
                     </a>
 
                     <!-- Email -->
-                    <a href="mailto:mail@physio-damm.de" class="flex items-start gap-4 bg-white border border-surface-alt rounded p-5 group hover:border-brand/30 transition-colors">
-                        <div class="w-11 h-11 bg-brand-pale rounded flex items-center justify-center shrink-0 group-hover:bg-brand transition-colors">
-                            <svg class="w-5 h-5 text-brand group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    <a href="mailto:mail@physio-damm.de" class="flex items-start gap-4 bg-white border border-surface-alt rounded p-5 group hover:border-physio/30 transition-colors">
+                        <div class="w-11 h-11 bg-physio-pale rounded flex items-center justify-center shrink-0 group-hover:bg-physio transition-colors">
+                            <svg class="w-5 h-5 text-physio group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                         </div>
                         <div>
                             <div class="font-[var(--font-heading)] font-semibold text-navy text-sm mb-0.5">E-Mail</div>
-                            <div class="text-brand font-semibold">mail@physio-damm.de</div>
+                            <div class="text-physio font-semibold">mail@physio-damm.de</div>
                         </div>
                     </a>
 
                     <!-- Address -->
                     <div class="flex items-start gap-4 bg-white border border-surface-alt rounded p-5">
-                        <div class="w-11 h-11 bg-brand-pale rounded flex items-center justify-center shrink-0">
-                            <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        <div class="w-11 h-11 bg-physio-pale rounded flex items-center justify-center shrink-0">
+                            <svg class="w-5 h-5 text-physio" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                         </div>
                         <div>
                             <div class="font-[var(--font-heading)] font-semibold text-navy text-sm mb-0.5">Adresse</div>
@@ -729,8 +729,8 @@
 
                     <!-- Bus -->
                     <div class="flex items-start gap-4 bg-white border border-surface-alt rounded p-5">
-                        <div class="w-11 h-11 bg-brand-pale rounded flex items-center justify-center shrink-0">
-                            <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h8m-8 4h8m-6 4h4M6 3h12a2 2 0 012 2v14l-4-2H6a2 2 0 01-2-2V5a2 2 0 012-2z"/></svg>
+                        <div class="w-11 h-11 bg-physio-pale rounded flex items-center justify-center shrink-0">
+                            <svg class="w-5 h-5 text-physio" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h8m-8 4h8m-6 4h4M6 3h12a2 2 0 012 2v14l-4-2H6a2 2 0 01-2-2V5a2 2 0 012-2z"/></svg>
                         </div>
                         <div>
                             <div class="font-[var(--font-heading)] font-semibold text-navy text-sm mb-0.5">Anfahrt mit dem Bus</div>
@@ -760,8 +760,8 @@
     <!-- CTA BAND -->
     <section class="bg-navy py-16 relative overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-0 right-0 w-64 h-64 border border-brand/30 rounded-full -translate-y-1/2 translate-x-1/4"></div>
-            <div class="absolute bottom-0 left-0 w-48 h-48 border border-brand-light/20 rounded-full translate-y-1/3 -translate-x-1/4"></div>
+            <div class="absolute top-0 right-0 w-64 h-64 border border-physio/30 rounded-full -translate-y-1/2 translate-x-1/4"></div>
+            <div class="absolute bottom-0 left-0 w-48 h-48 border border-physio-light/20 rounded-full translate-y-1/3 -translate-x-1/4"></div>
         </div>
         <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
             <h2 class="font-[var(--font-heading)] text-2xl sm:text-3xl font-bold text-white mb-4">
@@ -771,7 +771,7 @@
                 Vereinbaren Sie noch heute einen Termin. Wir nehmen uns Zeit für Sie und Ihre Gesundheit.
             </p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="tel:022158988779" class="cta-btn inline-flex items-center gap-2 bg-brand text-white font-semibold px-7 py-3.5 rounded hover:bg-brand-light transition-colors">
+                <a href="tel:022158988779" class="cta-btn inline-flex items-center gap-2 bg-physio text-white font-semibold px-7 py-3.5 rounded hover:bg-physio-light transition-colors">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                     0221-58988779
                     <svg class="w-4 h-4 cta-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
@@ -791,7 +791,7 @@
                 <!-- Brand -->
                 <div>
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-8 h-8 bg-brand rounded flex items-center justify-center">
+                        <div class="w-8 h-8 bg-physio rounded flex items-center justify-center">
                             <span class="text-white font-[var(--font-heading)] font-bold text-sm">P</span>
                         </div>
                         <span class="font-[var(--font-heading)] text-base font-bold tracking-[0.15em] text-navy">PHYSIO DAMM</span>
@@ -804,10 +804,10 @@
                 <div>
                     <h4 class="font-[var(--font-heading)] font-semibold text-navy text-sm mb-4">Navigation</h4>
                     <ul class="space-y-2">
-                        <li><a href="#start" class="text-sm text-gray-warm hover:text-brand transition-colors">Startseite</a></li>
-                        <li><a href="#leistungen" class="text-sm text-gray-warm hover:text-brand transition-colors">Leistungen</a></li>
-                        <li><a href="#ueber-uns" class="text-sm text-gray-warm hover:text-brand transition-colors">Über uns</a></li>
-                        <li><a href="#kontakt" class="text-sm text-gray-warm hover:text-brand transition-colors">Kontakt</a></li>
+                        <li><a href="#start" class="text-sm text-gray-warm hover:text-physio transition-colors">Startseite</a></li>
+                        <li><a href="#leistungen" class="text-sm text-gray-warm hover:text-physio transition-colors">Leistungen</a></li>
+                        <li><a href="#ueber-uns" class="text-sm text-gray-warm hover:text-physio transition-colors">Über uns</a></li>
+                        <li><a href="#kontakt" class="text-sm text-gray-warm hover:text-physio transition-colors">Kontakt</a></li>
                     </ul>
                 </div>
                 <!-- Contact -->
@@ -816,8 +816,8 @@
                     <ul class="space-y-2 text-sm text-gray-warm">
                         <li>Jungbluthgasse 5</li>
                         <li>50858 Köln-Junkersdorf</li>
-                        <li class="pt-1"><a href="tel:022158988779" class="hover:text-brand transition-colors">Tel: 0221-58988779</a></li>
-                        <li><a href="mailto:mail@physio-damm.de" class="hover:text-brand transition-colors">mail@physio-damm.de</a></li>
+                        <li class="pt-1"><a href="tel:022158988779" class="hover:text-physio transition-colors">Tel: 0221-58988779</a></li>
+                        <li><a href="mailto:mail@physio-damm.de" class="hover:text-physio transition-colors">mail@physio-damm.de</a></li>
                     </ul>
                 </div>
                 <!-- Hours -->
@@ -865,7 +865,7 @@
                     <p><strong class="text-navy">Ihre Daten:</strong> Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z.B. um Daten handeln, die Sie in ein Kontaktformular eingeben. Andere Daten werden automatisch beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z.B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie unsere Website betreten.</p>
                     <p><strong class="text-navy">Wofür nutzen wir Ihre Daten?</strong> Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.</p>
                     <p><strong class="text-navy">Ihre Rechte:</strong> Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung, Sperrung oder Löschung dieser Daten zu verlangen. Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden.</p>
-                    <p><strong class="text-navy">OpenStreetMap:</strong> Diese Seite nutzt den Kartendienst OpenStreetMap. Anbieter ist die OpenStreetMap Foundation, St John's Innovation Centre, Cowley Road, Cambridge, CB4 0WS, Vereinigtes Königreich. Beim Laden der Karte werden Daten an die Server der OpenStreetMap Foundation übertragen. Mehr Informationen finden Sie in der Datenschutzerklärung von OpenStreetMap: <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" class="text-brand hover:underline" target="_blank" rel="noopener">https://wiki.osmfoundation.org/wiki/Privacy_Policy</a></p>
+                    <p><strong class="text-navy">OpenStreetMap:</strong> Diese Seite nutzt den Kartendienst OpenStreetMap. Anbieter ist die OpenStreetMap Foundation, St John's Innovation Centre, Cowley Road, Cambridge, CB4 0WS, Vereinigtes Königreich. Beim Laden der Karte werden Daten an die Server der OpenStreetMap Foundation übertragen. Mehr Informationen finden Sie in der Datenschutzerklärung von OpenStreetMap: <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" class="text-physio hover:underline" target="_blank" rel="noopener">https://wiki.osmfoundation.org/wiki/Privacy_Policy</a></p>
                 </div>
             </div>
 
@@ -873,8 +873,8 @@
             <div class="py-6 border-t border-surface-alt flex flex-col sm:flex-row justify-between items-center gap-3">
                 <p class="text-xs text-gray-warm">&copy; 2026 Physio Damm — Elmar Damm. Alle Rechte vorbehalten.</p>
                 <div class="flex gap-4">
-                    <a href="#impressum" class="text-xs text-gray-warm hover:text-brand transition-colors">Impressum</a>
-                    <a href="#impressum" class="text-xs text-gray-warm hover:text-brand transition-colors">Datenschutz</a>
+                    <a href="#impressum" class="text-xs text-gray-warm hover:text-physio transition-colors">Impressum</a>
+                    <a href="#impressum" class="text-xs text-gray-warm hover:text-physio transition-colors">Datenschutz</a>
                 </div>
             </div>
         </div>
